@@ -7,7 +7,10 @@
         <meta http-equiv='pragma' content='no-cache'>
     </head>
     <body>
-        <div id="header" style="height: 200; width:100%">
+        <div id="textHidden">
+                <p>* example text</p>
+            </div>
+        <div id="header" class="wall" style="height: 200; width:100%">
             <div id="logo" style="height: 70%;">
                 <img src="icons/yummerTV.png" width="20%" height="80%" style="padding: 5;">
             </div>
@@ -18,14 +21,14 @@
                 <div id="video" class="tab" style="height: 100%; width:20%">
                     video
                 </div>
-                <div id="history" class="tab" style="height: 100%; width:20%">
+                <div id="history" class="tab wall" style="height: 100%; width:20%">
                     the history
                 </div>
                 
             
             </div>
         </div>
-
+        <img src="icons/key.jpg" id="key" class="collect">
         <div id="main">
             <h1 style="justify-self: center; font-size: 50; padding-bottom: 80px;">Welcome to YummersTV.com!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices, erat ut finibus sollicitudin, ipsum massa maximus odio, at sagittis est purus non ex. Donec luctus id enim ac porttitor. Ut egestas tortor ac risus ultricies, sed hendrerit nisl lacinia. Donec in iaculis odio. Pellentesque eros dui, accumsan sit amet ligula non, lacinia dignissim elit. Maecenas vulputate turpis tempus fringilla malesuada. Mauris aliquet posuere arcu, ac mollis tortor ultricies eget.</p>
@@ -40,8 +43,12 @@
             <canvas id="game">
             </canvas>
             <button class="button load_iframe_btn" id="gameStart"><svg stroke-width="2" aria-hidden="" height="24" stroke-linejoin="round" id="svgjunk" class="svgicon icon_play" fill="none" stroke="currentColor" version="1.1" role="img" stroke-linecap="round" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>  Run Game</button>
-
+            <div id="sign" class="interact wall game1">
+                <p># under construction #</p>
+                <p>* please fix the collision detection.  its still broken.<br><br>                 -Y</p>
+            </div>
         </div>
+        <p style="color:white; justify-self:center;line-height: 50%;">Move - Arrow Keys    Interact - Z<br> </p>
 
         <script src="js.js"></script>
     </body>
