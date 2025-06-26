@@ -1,8 +1,45 @@
 <html>
     <head>
         <title>YummersTV</title>
+        <link rel="stylesheet" href="cs.css">
     </head>
     <body>
-        welcome to yummers
+        <div id="header" style="height: 200; width:100%">
+            <div id="logo" style="height: 70%;">
+                <img src="icons/yummerTV.png" width="20%" height="80%" style="padding: 5;">
+            </div>
+            <div id="tabs" style=" height: 30%; width:100%; ">
+                <div id="gameTab" class="tab" style="height: 100%; width:20%">
+                    the game
+                </div>
+                <div id="video" class="tab" style="height: 100%; width:20%">
+                    video
+                </div>
+                <div id="history" class="tab" style="height: 100%; width:20%">
+                    the history
+                </div>
+                
+            
+            </div>
+        </div>
+
+        <div id="main">
+            <h1 style="justify-self: center; font-size: 50; padding-bottom: 80px;">Welcome to YummersTV.com!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices, erat ut finibus sollicitudin, ipsum massa maximus odio, at sagittis est purus non ex. Donec luctus id enim ac porttitor. Ut egestas tortor ac risus ultricies, sed hendrerit nisl lacinia. Donec in iaculis odio. Pellentesque eros dui, accumsan sit amet ligula non, lacinia dignissim elit. Maecenas vulputate turpis tempus fringilla malesuada. Mauris aliquet posuere arcu, ac mollis tortor ultricies eget.</p>
+            <p>Praesent eget lacus sit amet dolor commodo rutrum et quis urna. Proin quis viverra velit, eu volutpat arcu. Fusce nec convallis libero. Vestibulum odio mi, faucibus ut ipsum viverra, gravida consectetur arcu. Duis gravida erat vitae turpis blandit, non mollis est placerat. Aliquam euismod dolor dolor, a lacinia ex varius nec. Suspendisse et feugiat nisi, ac suscipit dui. Fusce tortor felis, feugiat pulvinar ligula vel, blandit pulvinar purus. Praesent pretium tortor ac blandit semper. Nam pharetra metus laoreet nisl vehicula, vitae consectetur libero maximus. Maecenas nec leo viverra, mollis ipsum ut, imperdiet sem. Mauris sit amet urna suscipit, tincidunt neque vel, condimentum diam. Cras dignissim dui metus, malesuada condimentum purus suscipit nec. Nulla facilisi. Fusce at ipsum felis.</p>
+            <p>In id nisi dapibus, cursus mauris a, ultricies tellus. Etiam commodo elit quis leo tristique, ut pharetra leo scelerisque. Nulla volutpat lorem vitae volutpat egestas. Mauris augue arcu, posuere congue libero venenatis, vulputate fringilla arcu. Suspendisse ac lectus congue, rutrum nisl id, euismod orci. Ut facilisis ligula quis neque imperdiet interdum. Proin vehicula laoreet ligula, in luctus ex viverra eget. Curabitur vel felis sed urna laoreet luctus. Praesent vel massa lectus. Mauris quis orci volutpat, volutpat elit a, congue urna. Curabitur sit amet magna lectus.</p>
+            <h1 style="justify-self: center; font-size: 50; padding-top: 250px;">THE GAME!!!!!!!</h1>
+            <h1 style="justify-self: center; font-size: 40; line-height: 25px;">|</h1>
+            <h1 style="justify-self: center; font-size: 40; line-height: 25px;">V</h1>
+        </div>
+
+        <div id="gameDiv">
+            <canvas id="game">
+            </canvas>
+            <button class="button load_iframe_btn" id="gameStart"><svg stroke-width="2" aria-hidden="" height="24" stroke-linejoin="round" id="svgjunk" class="svgicon icon_play" fill="none" stroke="currentColor" version="1.1" role="img" stroke-linecap="round" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>  Run Game</button>
+
+        </div>
+
+        <script src="js.js"></script>
     </body>
 </html>
