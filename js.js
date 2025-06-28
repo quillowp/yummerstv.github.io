@@ -6,11 +6,20 @@ const interactables = document.getElementsByClassName("interact")
 const collectibles = document.getElementsByClassName("collect")
 const textBox = document.getElementById("textHidden")
 const game1 = document.getElementsByClassName("game1")
+const chatButton = document.getElementById("chatButton")
+const chatText = document.getElementById("chatText")
+const invInside = document.getElementById("invInside")
+const openInv = document.getElementById("arrow")
+const inventory = document.getElementById("inventory")
+
+
+
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+//player junkj
 gameStart.onclick = async function() {
     gameStart.remove()
     let load = document.createElement("div")
@@ -38,6 +47,7 @@ gameStart.onclick = async function() {
     for (let i=0;i<game1.length;i++) {
       game1.item(i).style.display = "block"
     }
+    document.getElementById("key").style.display="inline"
 }
 
 up = false
@@ -59,6 +69,23 @@ let colDown
 let facing = "down"
 let text = []
 let items = []
+
+if (localStorage.getItem("keycard") == "true") {
+  console.log(true)
+  items.push(collectibles[0].id)
+      collectibles[0].remove()
+      if (items.length == 1) {
+        invInside.style.display = "grid"
+        invInside.innerHTML = '<div style="border: 2px solid rgb(122, 122, 122); width:120px; height:120px; padding:10px; margin: 15px; justify-self: center; display: flex;"><img id="keycard" class="item" src="icons/key.jpg" style="width:100%; height:60%; transform: rotate(-6deg);  align-self: center;"></div><div style="border: 0px solid rgb(122, 122, 122); width:120px; height:120px; margin: 15px; justify-self: center; display: flex;"></div>'
+      }
+      itemsHeld = document.getElementsByClassName("item")
+        for (let i=0;i<itemsHeld.length;i++) {
+          itemsHeld[i].addEventListener('mousedown', function (e) {
+            drag(e, itemsHeld[i])
+        })
+        }
+}
+
 
 document.addEventListener('keydown', (event) => {
   const keyPressed = event.key; // Gets the string representation of the key (e.g., "Enter", "a", "ArrowUp")
@@ -121,15 +148,19 @@ document.addEventListener('keyup', (event) => {
   // Example: Perform an action if the "Enter" key is pressed
   if (keyPressed === 'ArrowLeft') {
     left = false
+    facing = "left"
   }
   if (keyPressed === 'ArrowRight') {
     right = false
+    facing = "right"
   }
   if (keyPressed === 'ArrowUp') {
     up = false
+    facing = "up"
   }
   if (keyPressed === 'ArrowDown') {
     down = false
+    facing = "down"
   }
   
 
@@ -220,7 +251,20 @@ function collectibleCollision() {
 
     if (!(collect.right < player.left || collect.left > player.right || collect.bottom < player.top || collect.top > player.bottom)) {
       items.push(collectibles[i].id)
-      collectibles[i].remove()
+      collectibles[i].style.animation = "fall 1s ease-in-out"
+      if (items.length == 1) {
+        invInside.style.display = "grid"
+
+          localStorage.setItem("keycard", true)
+        invInside.innerHTML = '<div style="border: 2px solid rgb(122, 122, 122); width:120px; height:120px; padding:10px; margin: 15px; justify-self: center; display: flex;"><img id="keycard" class="item" src="icons/key.jpg" style="width:100%; height:60%; transform: rotate(-6deg);  align-self: center;"></div><div style="border: 0px solid rgb(122, 122, 122); width:120px; height:120px; margin: 15px; justify-self: center; display: flex;"></div>'
+                itemsHeld = document.getElementsByClassName("item")
+        for (let i=0;i<itemsHeld.length;i++) {
+          itemsHeld[i].addEventListener('mousedown', function (e) {
+            drag(e, itemsHeld[i])
+        })
+        }
+      }
+      
     }
 }
 }
@@ -283,6 +327,11 @@ function scrollWithPlayer() {
 
 
 const gameloop = setInterval(() => {
+      if (chatText.value.toLowerCase().includes("gaster")) {
+        window.scrollTo(0,0)
+      chatText.value = "                                                        "
+      location.reload()
+    }
   previousX = x
   previousY = y
 
@@ -311,7 +360,7 @@ const gameloop = setInterval(() => {
     
 
     let player = document.getElementById("player")
-    
+    if (player != null) {
     player.style.left = x + "px"
     player.style.top = y + "px"
     if (collision()) {
@@ -336,7 +385,81 @@ const gameloop = setInterval(() => {
     player.style.left = x + "px"
     player.style.top = y + "px"
     collectibleCollision()
-    scrollWithPlayer()
+    if (left || right || down || up) {
+      scrollWithPlayer()
+    }
+  }
     
     
+
 }, 10);
+
+
+
+
+// websiet junk
+chatButton.onclick = function() {
+
+    if (!(chatText.value == "" || chatText.value == null)) {
+      invInside.innerHTML += "<div style='border: 0px solid white; width:100%; height:40%'><div style='float:right;margin:10px; background-color: rgb(77, 77, 77); width: 70%; height: 80%'><div style='margin:5px; background-color: rgb(77, 77, 77); width: 98%; height: 80%; color:whitesmoke'>" + chatText.value + "</div></div></div>"
+      invInside.scrollTop = invInside.scrollHeight
+      chatText.value = ''
+    }
+}
+
+openInv.onclick = function() {
+  if (inventory.style.bottom == "-360px") {
+    inventory.style.bottom = "0px"
+    inventory.style.animation = "invDown 0.35s ease-out"
+    openInv.children[0].style.transform = "rotate(180deg)"
+  } else {
+    inventory.style.bottom = "-360px"
+    inventory.style.animation = "invUp 0.7s ease-in"
+    openInv.children[0].style.transform = "rotate(0deg)"
+  }
+}
+
+
+function drag(e, draggable) {
+  draggable.style.position = "absolute"
+  orgSizeWidth = draggable.style.width
+  orgSizeHeight = draggable.style.height
+  draggable.style.width = "200px"
+  draggable.style.height = "auto"
+  startDragX = e.clientX
+  startDragY = e.clientY
+  console.log(draggable)
+  e.preventDefault()
+  orgLeft = draggable.style.left
+  orgTop = draggable.style.top
+let shiftX = e.clientX - draggable.getBoundingClientRect().left;
+let shiftY = e.clientY - draggable.getBoundingClientRect().top;
+draggable.style.left = (e.clientX-startDragX) + 'px';
+    draggable.style.top = (e.clientY-startDragY+50) + 'px';
+
+// Function to handle mouse movement
+function onMouseMove(e) {
+    draggable.style.left = (e.clientX-startDragX) + 'px';
+    draggable.style.top = (e.clientY-startDragY+50) + 'px';
+    console.log("move")
+}
+// Function to handle mouse release (end of drag)
+function onMouseUp() {
+    // Remove mousemove and mouseup listeners from the document
+    draggable.style.left = orgLeft
+    draggable.style.top = orgTop
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+    draggable.style.position = "relative"
+    draggable.style.width = orgSizeWidth
+    draggable.style.height = orgSizeHeight
+    console.log("down")
+}
+
+document.addEventListener('mousemove', onMouseMove);
+document.addEventListener('mouseup', onMouseUp);
+}
+
+function reset() {
+  localStorage.clear()
+}
