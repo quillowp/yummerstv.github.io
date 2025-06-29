@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>YummersTV</title>
+        <link rel="stylesheet" href="cs.css">
+        <meta http-equiv='cache-control' content='no-cache'> 
+        <meta http-equiv='expires' content='0'> 
+        <meta http-equiv='pragma' content='no-cache'>
+    </head>
+    <body>
+        <div id="textHidden">
+                <p>* example text</p>
+            </div>
+        <button onclick="reset()">reset</button>
+
+        <div id="gameDiv" style="border: 1px solid black" color="white">
+            <div id="shadow"style="background-color: black;opacity: 50%; width:360px;height:360px;position:absolute; z-index:1"></div>
+            <img id="arrow" src="icons/arrow.png" style="width:50px; position:absolute;z-index: 2;">
+            <img id="errorVideo" src="icons/errorNotARealLink.png" style="width:360px; position:absolute;z-index: 2;display: none;">
+            <p id="error"  style="font-family: pixel; position: absolute; display: none; z-index: 5;color:white">FILE MOVED</p>
+            <video id="video" src="resources/horror.mp4"></video>
+        </div>
+        
+    
+
+        <script src="video.js"></script>
+    </body>
+</html>

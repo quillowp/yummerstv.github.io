@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>YummersTV</title>
+        <link rel="stylesheet" href="cs.css">
+        <meta http-equiv='cache-control' content='no-cache'> 
+        <meta http-equiv='expires' content='0'> 
+        <meta http-equiv='pragma' content='no-cache'>
+    </head>
+    <body>
+        <div id="textHidden">
+                <p>* example text</p>
+            </div>
+        <div id="header" class="wall" style="height: 200; width:100%">
+            <div id="logo" style="height: 70%;">
+                <img src="icons/yummersTV.png" width="20%" height="80%" style="padding: 5;">
+            </div>
+            <div id="tabs" style=" height: 30%; width:100%; ">
+                <div id="gameTab" class="tab" style="height: 100%; width:20%">
+                    the game
+                </div>
+                <div id="video" class="tab" style="height: 100%; width:20%">
+                    video
+                </div>
+                <div id="history" class="tab wall" style="height: 100%; width:20%">
+                    the history
+                </div>
+                
+            
+            </div>
+        </div>
+        <img src="icons/key.jpg" id="key" class="collect">
+        <button onclick="reset()">reset</button>
+        <div id="main">
+            <h1 style="justify-self: center; font-size: 50; padding-bottom: 80px;">Welcome to YummersTV.com!</h1>
+            <p>Years ago, YummersTV started with a vision, a vision to bring entertainment to the masses, in every form possible. Today, I, Yummers, unveil to you, the beginning of a new era for YummersTV, for long, we have been limited to just showing up on your television, but now, you get to be a character, you get to be a part of YummersTV, today, I present to you, YummersTV: The Game.</p>
+            <p>Let me tell you, it is expansive, over 8000 possible hours of gameplay, 9 different main storylines, 32 side storylines, 34 million collectable items, 1 or more maps, and Murg. YummersTV: The Game was inspired by GTA V, Deltarune, Les Aventures De Feirut, and the biblical story of the second temple. In fact, this game is SO expansive, we have broken the laws of reality in its gameplay, you LITERALLY will become YummersTV, you will FEEL IT. I am so proud to have put my blood, sweat, and tears, and blood, and sweat into this, you’re gonna love it, it’s even Donald Trump approved.</p>
+            <img id="true" src="icons/true.png" style="width:200px;height:auto;position:absolute;transform: translate(600px, -80px);">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra risus quis nulla gravida, sit amet hendrerit nunc blandit. Morbi non sem ut tellus imperdiet sollicitudin. Integer sagittis sem maximus pretium elementum. Aliquam non dolor nec quam suscipit condimentum at non lectus. Duis ante libero, tristique quis maximus ac, semper nec neque. Fusce id elit ut odio feugiat sagittis vel sit amet leo. Quisque sed ullamcorper erat. Sed nec dictum turpis. Duis porttitor nulla orci, vel feugiat ante tempor a. Fusce sit amet dignissim ipsum. Praesent auctor consectetur velit, non cursus arcu suscipit ac. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec iaculis diam nec lacinia pharetra.</p>
+            <h1 style="justify-self: center; font-size: 50; padding-top: 250px;">THE GAME!!!!!!!</h1>
+            <h1 style="justify-self: center; font-size: 40; line-height: 25px;">|</h1>
+            <h1 style="justify-self: center; font-size: 40; line-height: 25px;">V</h1>
+        </div>
+
+        <div id="fakeDiv" style="top:2100px; position:absolute; display: flex;">
+            <canvas id="fsdfsdf" class="hosdsdfpper" style="z-index: -1;">
+            </canvas>
+            <button class="butsdfton load_iframe_btn" id="gameStsdfart" style="border: 0px; opacity: 0%;"></button>
+            <div id="sisdfsdfgn" class="intsdferact sdfwasdfll gasdfme1">
+
+            </div>
+        </div>
+        <div id="gameDiv" style="top:50000px; position:absolute; display: none;">
+            <canvas id="game" class="hopper" style="z-index: -1;">
+            </canvas>
+            <button class="button load_iframe_btn" id="gameStart"><svg stroke-width="2" aria-hidden="" height="24" stroke-linejoin="round" id="svgjunk" class="svgicon icon_play" fill="none" stroke="currentColor" version="1.1" role="img" stroke-linecap="round" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>  Run Game</button>
+            <div id="sign" class="interact wall game1">
+                <p># under construction #</p>
+                <p>* please update the text.  we still have the lorem ipsum<br><br>                 -M</p>
+            </div>
+        </div>
+
+
+        <div id="inventory" style="background-color: rgb(63, 63, 63); width:350px; height: 400px; position:fixed;float:right; bottom: -360px; right: 50px">
+
+            <div id="arrow" style="width:100%; height:40px; display: flex; justify-content: right;">
+                <img src="icons/arrow.png" style="height:42%; margin-right: 10px; margin-top: 10px">
+            </div>
+            <div id="invInside" style="background-color: rgb(27, 27, 27); height:70%; overflow: scroll; scrollbar-width: none; grid: auto auto / auto auto">
+                <div style="border: 0px solid white; width:100%; height:40%">
+                    <div style="margin:10px; background-color: gray; width: 70%; height: 80%">
+                        <div style="margin:5px; background-color: gray; width: 98%; height: 80%; color:whitesmoke">Thank you for visiting YummersTV.com. Let us know if you need any support!</div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+            <div id="chat" style="background-color: rgb(63, 63, 63); height:20%; display: flex; align-content: center; ">
+                <input id="chatText" type="text" autocomplete="off" style="color:whitesmoke; padding:10px; font-size: 16px; margin: 10px; width:70%; float:left; background-color: rgb(39, 39, 39); border-width: 0px;">
+                <button id="chatButton" style="background-color: rgb(39, 39, 39);margin: 15px; width:14%; height:60%; float:left"><img src="icons/arrow.png" style="height:42%; margin: 3px; transform: rotate(90deg);"></button>
+            </div>
+        </div>
+
+        <script src="jsOdd.js"></script>
+    </body>
+</html>
