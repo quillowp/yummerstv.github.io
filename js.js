@@ -11,6 +11,7 @@ const chatText = document.getElementById("chatText")
 const invInside = document.getElementById("invInside")
 const openInv = document.getElementById("arrow")
 const inventory = document.getElementById("inventory")
+const hoppers = document.getElementsByClassName("hopper")
 
 
 
@@ -18,6 +19,9 @@ const inventory = document.getElementById("inventory")
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+ctx.fillStyle = "#0f0f0f"
+ctx.fillRect(0,0,1000,1000)
 
 //player junkj
 gameStart.onclick = async function() {
@@ -252,8 +256,15 @@ function collectibleCollision() {
     if (!(collect.right < player.left || collect.left > player.right || collect.bottom < player.top || collect.top > player.bottom)) {
       items.push(collectibles[i].id)
       collectibles[i].style.animation = "fall 1s ease-in-out"
+      setTimeout(() => {
+        collectibles[i].remove()
+      }, 950);
       if (items.length == 1) {
         invInside.style.display = "grid"
+        text.push("keycard has been added to your inventory.")
+        textBox.children.item(0).innerHTML = text[0]
+        text.shift()
+        textBox.setAttribute("id", "text")
 
           localStorage.setItem("keycard", true)
         invInside.innerHTML = '<div style="border: 2px solid rgb(122, 122, 122); width:120px; height:120px; padding:10px; margin: 15px; justify-self: center; display: flex;"><img id="keycard" class="item" src="icons/key.jpg" style="width:100%; height:60%; transform: rotate(-6deg);  align-self: center;"></div><div style="border: 0px solid rgb(122, 122, 122); width:120px; height:120px; margin: 15px; justify-self: center; display: flex;"></div>'
@@ -332,6 +343,8 @@ const gameloop = setInterval(() => {
       chatText.value = "                                                        "
       location.reload()
     }
+  
+    if (text.length<1) {
   previousX = x
   previousY = y
 
@@ -389,6 +402,7 @@ const gameloop = setInterval(() => {
       scrollWithPlayer()
     }
   }
+  }
     
     
 
@@ -400,11 +414,11 @@ const gameloop = setInterval(() => {
 // websiet junk
 chatButton.onclick = function() {
 
-    if (!(chatText.value == "" || chatText.value == null)) {
+    if (!(chatText.value == "" || chatText.value == null) && items.length==0) {
       invInside.innerHTML += "<div style='border: 0px solid white; width:100%; height:40%'><div style='float:right;margin:10px; background-color: rgb(77, 77, 77); width: 70%; height: 80%'><div style='margin:5px; background-color: rgb(77, 77, 77); width: 98%; height: 80%; color:whitesmoke'>" + chatText.value + "</div></div></div>"
       invInside.scrollTop = invInside.scrollHeight
-      chatText.value = ''
     }
+    chatText.value = ''
 }
 
 openInv.onclick = function() {
@@ -420,7 +434,10 @@ openInv.onclick = function() {
 }
 
 
+let keycarded = false
+
 function drag(e, draggable) {
+  // configure tiem to look bigger and draggable
   draggable.style.position = "absolute"
   orgSizeWidth = draggable.style.width
   orgSizeHeight = draggable.style.height
@@ -445,7 +462,17 @@ function onMouseMove(e) {
 }
 // Function to handle mouse release (end of drag)
 function onMouseUp() {
-    // Remove mousemove and mouseup listeners from the document
+    // detect hitboxes on release: checks every element
+    for (let i=0; i<hoppers.length;i++) {
+      let object = hoppers[i].getBoundingClientRect()
+      console.log(hoppers[i])
+      let curItem = draggable.getBoundingClientRect()
+      if (!(object.right < curItem.left || object.left > curItem.right || object.bottom < curItem.top || object.top > curItem.bottom)) {
+        checkItemInteract(draggable, hoppers[i])
+      }
+    }
+
+    // reset item image
     draggable.style.left = orgLeft
     draggable.style.top = orgTop
     document.removeEventListener('mousemove', onMouseMove);
@@ -460,6 +487,43 @@ document.addEventListener('mousemove', onMouseMove);
 document.addEventListener('mouseup', onMouseUp);
 }
 
+// reset save
 function reset() {
   localStorage.clear()
+}
+
+function checkItemInteract(item, object){
+  console.log(object.id)
+    if (object.id == "game" && item.id=="keycard" && keycarded == false) {
+      keycarded = true
+      
+      let keyAnim = document.createElement("img")
+      keyAnim.src = "icons/key.jpg"
+      keyAnim.style = "position:absolute; width:250px; height:auto; transform: rotate(90deg); left:1200px;top: 1430px; animation: 1s keycardDown; z-index: -5"
+      setTimeout(() => {
+        keyAnim.remove()
+        let approved = document.createElement("div")
+        approved.style.width = "700px"
+        approved.style.height = "500px"
+        approved.style.position = "absolute"
+        approved.style.backgroundColor = "black"
+        approved.style.display = "flex"
+        approved.style.alignContent="center"
+        approved.style.justifyContent="center"
+        approved.style.color="white"
+        let p = document.createElement("p")
+        p.innerHTML = "APPROVED"
+        p.style.fontFamily = "pixel"
+        p.style.alignContent= "center"
+        p.style.left="45%"
+        approved.appendChild(p)
+        document.getElementById("gameDiv").appendChild(approved)
+        setTimeout(() => {
+          window.location.href = "codePage.html"
+        }, 2000)
+      }, 950);
+      document.getElementById("gameDiv").appendChild(keyAnim)
+
+
+    }
 }
