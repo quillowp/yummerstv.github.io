@@ -12,7 +12,7 @@
             </div>
         <div id="header" class="wall" style="height: 200; width:100%">
             <div id="logo" style="height: 70%;">
-                <img src="icons/yummerstv.png" width="20%" height="80%" style="padding: 5;">
+                <img src="icons/yummersTV.png" width="20%" height="80%" style="padding: 5;">
             </div>
             <div id="tabs" style=" height: 30%; width:100%; ">
                 <div id="gameTab" class="tab" style="height: 100%; width:20%">
@@ -42,7 +42,7 @@
         </div>
 
         <div id="gameDiv">
-            <canvas id="game">
+            <canvas id="game" class="hopper" style="z-index: -1;">
             </canvas>
             <button class="button load_iframe_btn" id="gameStart"><svg stroke-width="2" aria-hidden="" height="24" stroke-linejoin="round" id="svgjunk" class="svgicon icon_play" fill="none" stroke="currentColor" version="1.1" role="img" stroke-linecap="round" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>  Run Game</button>
             <div id="sign" class="interact wall game1">
@@ -52,7 +52,8 @@
         </div>
         <p style="color:white; justify-self:center;line-height: 50%;">Move - Arrow Keys    Interact - Z<br> </p>
 
-        <div id="inventory" style="background-color: rgb(63, 63, 63); width:350px; height: 400px; position:fixed; bottom: -360px; right: 50px">
+        <div id="inventory" style="background-color: rgb(63, 63, 63); width:350px; height: 400px; position:fixed;float:right; bottom: -360px; right: 50px">
+
             <div id="arrow" style="width:100%; height:40px; display: flex; justify-content: right;">
                 <img src="icons/arrow.png" style="height:42%; margin-right: 10px; margin-top: 10px">
             </div>
