@@ -43,6 +43,22 @@ body {
     bottom: 0px;
   }
 }
+@keyframes keycardDown {
+  0% {
+    top: 1430px;
+  }
+  100% {
+    top: 2030px;
+  }
+}
+@keyframes chatboxFall {
+  0% {
+    bottom:-360px;
+  }
+  100% {
+    bottom: -600px;
+  }
+}
 
 
 
@@ -157,7 +173,8 @@ div {
     position: fixed;
     left:50%;
     top: 80%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    z-index:999
 }
 #textHidden {
     background-color: black;
