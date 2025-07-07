@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cs.css">
+    </head>
+    <body>
+        <img id="base" src="icons/edgertron/tronHands.png" style="height:90%; display: flex;position:absolute; margin-left: 50%; transform: translate(-50%); margin-top: 10px;">
+        <img id="level3" src="icons/edgertron/tronLevel3.png" style="height:55%;display: flex;position:absolute; margin-left: 50%; transform: translate(-50%); margin-top: 160px;">
+        <img id="level2" src="icons/edgertron/tronLevel2.png" style="height:34%;display: flex;position:absolute; margin-left: 50%; transform: translate(-50%); margin-top: 270px;">
+        <img id="level1" src="icons/edgertron/tronLevel1.png" style="height:18%;display: flex;position:absolute; margin-left: 50%; transform: translate(-50%); margin-top: 350px;">
+        <script>
+            const level1 = document.getElementById("level1")
+            const level2 = document.getElementById("level2")
+            const level3 = document.getElementById("level3")
+            const base = document.getElementById("base")
+
+            let level1Rot = 0
+            let level2Rot = 0
+            let level3Rot = 0
+
+            base.onclick = function() {
+                console.log(level1Rot, level2Rot, level3Rot)
+            }
+
+            level1.onclick = function() {
+                level1Rot += 1
+                level1.style.transform = "translate(-50%) rotate(" + level1Rot*60 + "deg)"
+                
+                if (level1Rot == 6) {
+                    level1.style.transform = "translate(-50%) rotate(0deg) "
+                    level1Rot = 0
+                }
+
+                checkCorrect()
+            }
+
+            level2.onclick = function() {
+                level2Rot += 1
+                level2.style.transform = " translate(-50%) rotate(" + level2Rot*60 + "deg) "
+                
+                if (level2Rot == 6) {
+                    level2.style.transform = "translate(-50%) rotate(0deg) "
+                    level2Rot = 0
+                }
+                checkCorrect()
+            }
+
+            level3.onclick = function() {
+                level3Rot += 1
+                level3.style.transform = " translate(-50%) rotate(" + level3Rot*60 + "deg) "
+                
+                if (level3Rot == 6) {
+                    level3.style.transform = "translate(-50%) rotate(0deg) "
+                    level3Rot = 0
+                }
+                checkCorrect()
+            }
+
+
+            function checkCorrect() {
+                if ((level1Rot == 1 || level1Rot == 4) && level2Rot == 3 && level3Rot == 5) {
+                    localStorage.setItem("edgertron", "right")
+                } else if ((level1Rot == 1 || level1Rot == 4) && level2Rot == 0 && level3Rot == 2) {
+                    localStorage.setItem("edgertron", "left")
+                } else if ((level1Rot == 2 || level1Rot == 5) && level2Rot == 1 && level3Rot == 3) {
+                    localStorage.setItem("edgertron", "up")
+                }  else if ((level1Rot == 2 || level1Rot == 5) && level2Rot == 4 && level3Rot == 0) {
+                    localStorage.setItem("edgertron", "down")
+                } else (
+                    localStorage.setItem("edgertron", "null")
+                )
+            }
+            // function checkCorrect() {
+            //     let correct = [0,0,0]
+            //     if (level1Rot == 4 || level1Rot == 1) {
+            //         correct[0] = 1
+            //     } else {
+            //         correct[0] = 0
+            //     }
+            //     if(level2Rot == 3 || level2Rot == 5 || level2Rot == 1) {
+            //         correct[1] = 1
+            //     } else {
+            //         correct[1] = 0
+            //     }
+            //     if(level3Rot == 2 || level3Rot == 5) {
+            //         correct[2] = 1
+            //     } else {
+            //         correct[2] = 0
+            //     }
+
+            //     if (correct[0] == 1 && correct[1] == 1 && correct[2] == 1) {
+            //         localStorage.setItem("edgertron", true)
+            //         console.log("correct")
+            //     } else {
+            //         localStorage.setItem("edgertron", false)
+            //         console.log("reset")
+            //     }
+            // }
+        </script>
+    </body>
+</html>

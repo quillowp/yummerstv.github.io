@@ -7,63 +7,30 @@ body {
 
 @keyframes MoveUpDown {
   0%, 100% {
-    margin-top: 0;
+    bottom: 0;
   }
   50% {
-    margin-top: 20px;
+    bottom: 20px;
   }
 }
 @keyframes fall {
   0% {
-    margin-top: 0;
+    bottom: 0;
+
   }
-  30% {
-    margin-top: -150px;
+  20% {
+    bottom: 150px;
 
   }
   100% {
-    margin-top: 800px;
+    bottom: -800px;
 
   }
 }
-
-@keyframes invUp {
-  0% {
-    bottom: 0px;
-  }
-  100% {
-    bottom: -360px;
-  }
-}
-@keyframes invDown {
-  0% {
-    bottom: -360px;
-  }
-  100% {
-    bottom: 0px;
-  }
-}
-@keyframes keycardDown {
-  0% {
-    top: 1430px;
-  }
-  100% {
-    top: 2030px;
-  }
-}
-@keyframes chatboxFall {
-  0% {
-    bottom:-360px;
-  }
-  100% {
-    bottom: -600px;
-  }
-}
-
-
 
 div {
 
+    overflow: hidden;
 
 }
 
@@ -91,10 +58,8 @@ div {
 }
 
 #gameDiv {
-    margin-top: 50px;
-    margin-left: 530px;
+    margin: 50px;
     display: flex;
-    width:800px;
     justify-content: center;
     align-items: center;
 }
@@ -129,7 +94,6 @@ div {
     position: absolute;
     left: 694;
     top: 2187;
-    z-index: 1;
 }
 
 #sign {
@@ -142,7 +106,7 @@ div {
 }
 
 .collect {
-    animation: MoveUpDown 5s infinite;
+    animation: MoveUpDown 5s ease-in-out infinite;
     position: absolute;
     transform: translate(0px, -600px);
 
@@ -151,9 +115,6 @@ div {
 #key{
     width:200px;
     height: auto;
-    top:840px;
-    right:50px;
-    display:none
 
 }
 
@@ -174,8 +135,7 @@ div {
     position: fixed;
     left:50%;
     top: 80%;
-    transform: translate(-50%, -50%);
-    z-index:999
+    transform: translate(-50%, -50%)
 }
 #textHidden {
     background-color: black;

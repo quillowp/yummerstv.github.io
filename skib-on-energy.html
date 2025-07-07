@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="cs.css">
+    </head>
+    <body>
+        <img id="base" src="icons/flute/base.png" style="height:90%; display: flex;position:absolute; margin-left: 50%; transform: translate(-50%); margin-top: 10px;">
+        <img id="hole1" src="icons/flute/hole.png" style="height:10%;display: flex;position:absolute; margin-left: 50%; transform: translate(-50%); margin-top: 300px;">
+        <img id="hole2" src="icons/flute/hole.png" style="height:10%;display: flex;position:absolute; margin-left: 50%; transform: translate(-50%); margin-top: 400px;">
+        <img id="hole3" src="icons/flute/hole.png" style="height:10%;display: flex;position:absolute; margin-left: 50%; transform: translate(-50%); margin-top: 500px;">
+        <script>
+            const hole1 = document.getElementById("hole1")
+            const hole2 = document.getElementById("hole2")
+            const hole3 = document.getElementById("hole3")
+
+            const base = document.getElementById("base")
+
+            const flute1 = new Audio('resources/sounds/flute/flute1.wav');
+            const flute2 = new Audio('resources/sounds/flute/flute2.wav');
+            const flute3 = new Audio('resources/sounds/flute/flute3.wav');
+
+
+            let fluteCounter = 0
+
+            hole1.onclick = function() {
+                flute1.play()
+                if (fluteCounter == 2) {
+                    fluteCounter++
+                } else {
+                    fluteCounter = 0
+                }
+            }
+            hole2.onclick = function() {
+                flute2.play()
+                if (fluteCounter == 1) {
+                    fluteCounter++
+                } else 
+                if (fluteCounter == 3) {
+                    fluteCounter++
+                } else
+                if (fluteCounter == 5) {
+                    console.log(localStorage.getItem("edgertron"))
+                    if (localStorage.getItem("edgertron") != "null") {
+                        if (localStorage.getItem("edgertron") == "right") {
+                            localStorage.setItem("secretRight", "true")
+                        } else if (localStorage.getItem("edgertron") == "up") {
+                            localStorage.setItem("secretUp", "true")
+                        } else if (localStorage.getItem("edgertron") == "left") {
+                            localStorage.setItem("secretLeft", "true")
+                        } else if (localStorage.getItem("edgertron") == "down") {
+                            localStorage.setItem("secretDown", "true")
+                        }
+                    }
+                    fluteCounter=0
+                } else {
+                    fluteCounter = 0
+                }
+            }
+            hole3.onclick = function() {
+                flute3.play()
+                if (fluteCounter == 0) {
+                    fluteCounter++
+                } else
+                if (fluteCounter == 4) {
+                    fluteCounter++
+                } else {
+                    fluteCounter = 0
+                }
+            }
+
+
+        </script>
+    </body>
+</html>

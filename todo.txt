@@ -1,0 +1,16 @@
+swipe animation on game with keycard
+video break an new website (save this)
+house maps
+transitions ons creen edge
+map maker easier 
+
+
+house
+./ make scub work
+./ make portal work
+./ make edgertron page
+./ make flute page
+- make theme for flute
+./ make edgetron/flute spell work
+- make camera item work
+- make new rooms
