@@ -382,8 +382,8 @@ houseMap7startY = 3
 
 houseMap8 = [
   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
-  " ", "F", "T", "T", "T", "T", "F", "T", "T", "T", "T", " ",
-  " ", "F", "F", "T", "T", "F", "F", "F", "T", "T", "T", " ",
+  " ", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", " ",
+  " ", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", " ",
   " ", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", ">V3",
   " ", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", " ",
   " ", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", " ",
@@ -394,13 +394,13 @@ houseMap8 = [
 ]
 houseMap8Decor  = [
   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
-  " ", "W", "R", "R", "R", "R", "W", "R", "R", "R", "R", " ",
-  " ", "W", "W", "R", "R", "W", "W", "W", "R", "R", "R", " ",
-  " ", "W", "W", "W", "W", "W", "W", "W", "W", "W", "R", " ",
-  " ", "W", "W", "W", "W", "W", "T", "W", "W", "W", "W", " ",
-  " ", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", " ",
-  " ", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", " ",
-  " ", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "
   
 ]
@@ -413,25 +413,25 @@ houseMap8startY = 3
 
 houseMap9 = [
   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
-  " ", "F", "T", "T", "T", "T", "F", "T", "T", "T", "T", " ",
-  " ", "F", "F", "T", "T", "F", "F", "F", "T", "T", "T", " ",
-  " ", "F", "F", "F", "F", "F", "F", "F", "F", "F", "T", " ",
+  " ", "T", "T", "T", "T", "T", "T", "T", "T", "T", "T", " ",
   " ", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", " ",
-  " ", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", " ",
-  " ", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", " ",
+  " ", "F", "T", "F", "T", "F", "T", "F", "T", "F", "T", " ",
+  " ", "F", "T", "F", "T", "F", "T", "F", "T", "F", "T", " ",
+  " ", "F", "T", "F", "T", "F", "T", "F", "T", "F", "T", " ",
+  " ", "F", "T", "F", "T", "F", "T", "F", "T", "F", "T", " ",
   " ", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", " ",
   " ", " ", " ", " ", ">V4", " ", " ", " ", " ", " ", " ", " "
   
 ]
 houseMap9Decor  = [
   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
-  " ", "W", "R", "R", "R", "R", "W", "R", "R", "R", "R", " ",
-  " ", "W", "W", "R", "R", "W", "W", "W", "R", "R", "R", " ",
-  " ", "W", "W", "W", "W", "W", "W", "W", "W", "W", "R", " ",
-  " ", "W", "W", "W", "W", "W", "T", "W", "W", "W", "W", " ",
-  " ", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", " ",
-  " ", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", " ",
-  " ", "W", "W", "W", "W", "W", "W", "W", "W", "W", "W", " ",
+  " ", "Y", "Y", "Y", "Y", "Y", "Y", "Y", "Y", "Y", "Y", " ",
+  " ", "K", "K", "K", "K", "K", "K", "K", "K", "K", "K", " ",
+  " ", "K", "M", "K", "M", "K", "M", "K", "M", "K", "M", " ",
+  " ", "K", "M", "K", "M", "K", "M", "K", "M", "K", "M", " ",
+  " ", "K", "M", "K", "M", "K", "M", "K", "M", "K", "M", " ",
+  " ", "K", "M", "K", "M", "K", "M", "K", "M", "K", "M", " ",
+  " ", "K", "K", "K", "K", "K", "K", "K", "K", "K", "K", " ",
   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "
   
 ]
@@ -440,41 +440,82 @@ houseMap9Special = [
 ]
 
 houseMap9startX = 4.51
-houseMap9startY = 7
+houseMap9startY = 7.1
+
+houseMap10 = [
+  "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F",
+  "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F",
+  "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F",
+  "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F",
+  "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F",
+  "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F",
+  "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F",
+  "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F",
+  "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F", "F"
+  
+]
+houseMap10Decor  = [
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+  " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "
+  
+]
+houseMap10Special = [
+    [5,4, [["you got the keycard.", "`keycard2()",], 20, 0]],
+    [4,4, [["you got the keycard.", "`keycard2()",], 20, 0]],
+    [6,4, [["you got the keycard.", "`keycard2()",], 20, 0]],
+]
+
+houseMap10startX = 4.51
+houseMap10startY = 7.1
 
 
+
+let number1Found = false
+let number2Found = false
+let number3Found = false
+let staffUnlocked = false
 
 // get current houseMap
 let curHouse = houseMap1
 
 textureMap = {
-  "F" : "../textures/floor.png",
-  "T" : "../textures/table.png",
-  "T2": "../textures/table2.png",
-  "W" : "../textures/wall.png",
-  "G" : "../textures/couch.png",
-  "8" : "../textures/fridge.png",
-  "D" : "../textures/door.png",
-  "V" : "../textures/tv.png",
-  "S" : "../textures/stairs.png",
-  "X" : "../textures/X.png",
-  "C" : "../textures/chair.png",
-  "H" : "../textures/stove.png",
-  "N" : "../textures/note.png",
-  "J" : "../textures/shower.png",
-  "P" : "../textures/toilet.png",
-  "E" : "../textures/grass.png",
-  "R" : "../textures/leaf.png",
-  "Z" : "../textures/water.png",
-  "": "../textures/resources.png",
-  " ": "../textures/resources.png",
-  ">S1": "../textures/door.png",
-  ">S2": "../textures/resources.png",
-  ">S3": "../textures/door.png",
-  ">F2": "../textures/resources.png",
-  ">F1": "../textures/floor.png",
-  ">K": "../textures/resources.png",
-  ">R": "../textures/door.png",
+  "F" : "textures/floor.png",
+  "T" : "textures/table.png",
+  "T2": "textures/table2.png",
+  "W" : "textures/wall.png",
+  "G" : "textures/couch.png",
+  "8" : "textures/fridge.png",
+  "D" : "textures/door.png",
+  "V" : "textures/tv.png",
+  "S" : "textures/stairs.png",
+  "X" : "textures/X.png",
+  "C" : "textures/chair.png",
+  "H" : "textures/stove.png",
+  "N" : "textures/note.png",
+  "J" : "textures/shower.png",
+  "P" : "textures/toilet.png",
+  "E" : "textures/grass.png",
+  "R" : "textures/leaf.png",
+  "Z" : "textures/water.png",
+  "Y" : "textures/fridge_small.png",
+  "M" : "textures/shelf.png",
+  "K" : "textures/tile.png",
+  "": "textures/resources.png",
+  " ": "textures/resources.png",
+  ">S1": "textures/door.png",
+  ">S2": "textures/resources.png",
+  ">S3": "textures/door.png",
+  ">F2": "textures/resources.png",
+  ">F1": "textures/floor.png",
+  ">K": "textures/resources.png",
+  ">R": "textures/door.png",
   
 }
 
@@ -589,6 +630,27 @@ function scubMirror(text) {
   }
 }
 
+function passwordStaff(text = "nil", size) {
+  if ((text == "413237" && curHouse==houseMap3) || staffUnlocked) {
+    sendText("the door was unlocked.")
+    facing = "down"
+    let newDiv = document.createElement("div")
+      newDiv.style.width = size
+      newDiv.style.height = size
+      newDiv.style.left = 2*size + 588
+      newDiv.style.top = 2*size + 50058
+      newDiv.style.position = "absolute"
+      newDiv.style.backgroundColor = "purple"
+      newDiv.setAttribute("class", "housemap transition houseMap10")
+      // id is where to transition to
+      newDiv.setAttribute("id", "houseMap10")
+      document.body.insertBefore(newDiv, gameDiv)
+
+      staffUnlocked = true
+
+  }
+}
+
 function makeDoor(size) {
   console.log("running")
   if (localStorage.getItem("secretRight") == "true") {
@@ -646,6 +708,44 @@ function makeDoor(size) {
       newDiv.setAttribute("id", "houseMap5")
       document.body.insertBefore(newDiv, gameDiv)
   } 
+}
+
+function makeNewDivForNumber(number, x) {
+  let newDiv3 = document.createElement("div")
+        newDiv3.style.width = 200
+        newDiv3.style.height = 140
+        newDiv3.style.left = 588 + x - 55
+        newDiv3.style.top = 50625 - 410
+        newDiv3.style.position = "absolute"
+        newDiv3.style.zIndex = "3"
+        newDiv3.setAttribute("class", "houseMap")
+        newDiv3.setAttribute("id", "numberPicture")
+        let newDiv4 = document.createElement("p")
+        newDiv4.style.position = "absolute"
+        newDiv4.innerHTML = number
+        newDiv4.style.fontSize = "50"
+        newDiv4.style.color = "gray"
+        newDiv4.style.zIndex = "3"
+        newDiv4.setAttribute("class", "houseMap")
+        newDiv4.setAttribute("id", "numberPictue1")
+        newDiv3.appendChild(newDiv4)
+        document.body.insertBefore(newDiv3, gameDiv)
+}
+
+let keycard2collected = false
+function keycard2() {
+  document.getElementById("keycard2").src = "textures/keycardHighlight2.png"
+  keycard2collected = true
+}
+
+function haff() {
+  if (keycard2collected) {
+    let keyAnim = document.createElement("img")
+      keyAnim.src = "icons/key.jpg"
+      keyAnim.style = "position:absolute; width:250px; height:auto; transform: rotate(90deg); left:570px;top: 100px; animation: 1s keycardUp ease-out; z-index: -5"
+      document.body.insertBefore(keyAnim, gameDiv)
+      localStorage.setItem("act2", true)
+  }
 }
 
 
@@ -843,6 +943,7 @@ function gameLoad(map, size) {
         y += 50060
         x += 560
         interactLoad(houseMap3Special, mapx, mapy, size)
+        
 
       }  else if (map == houseMap4) {
         newDiv.classList.add("houseMap")
@@ -867,6 +968,22 @@ function gameLoad(map, size) {
         y += 50060
         x += 560
         interactLoad(houseMap6Special, mapx, mapy, size)
+
+        if (document.getElementById("numberPicture") == null) {
+          makeNewDivForNumber("#", 200)
+          makeNewDivForNumber("#", 270)
+          makeNewDivForNumber("#", 340)
+          
+          if (number1Found) {
+          makeNewDivForNumber("2", 410)
+          }
+          if (number2Found) {
+          makeNewDivForNumber("3", 480)
+          }
+          if (number3Found) {
+          makeNewDivForNumber("7", 530)
+          }
+        }
 
 
       }   else if (map == houseMap7) {
@@ -916,7 +1033,24 @@ function gameLoad(map, size) {
         y += 50060
         x += 560
         interactLoad(houseMap8Special, mapx, mapy, size)
-
+        if (Math.round(mapx/size) == 2 && Math.round(mapy/size) == 0 && number3Found == false) {
+        let newDiv2 = document.createElement("div")
+        newDiv2.style.width = size*8
+        newDiv2.style.height = size*8
+        newDiv2.style.left = mapx + 588
+        newDiv2.style.top = mapy + 50055
+        newDiv2.style.position = "absolute"
+        newDiv2.style.zIndex = "3"
+        newDiv2.setAttribute("class", "hopper houseMap")
+        newDiv2.setAttribute("id", "whatsapp")
+        let newimg2 = document.createElement("img")
+        newimg2.style.width = "100%"
+        newimg2.style.height = "100%"
+        newimg2.style.zIndex = "3"
+        newimg2.src= "textures/superscary.png"
+        newDiv2.appendChild(newimg2)
+        document.body.insertBefore(newDiv2, gameDiv)
+        }
 
       }   else if (map == houseMap9) {
         newDiv.classList.add("houseMap")
@@ -925,8 +1059,52 @@ function gameLoad(map, size) {
         y += 50060
         x += 560
         interactLoad(houseMap9Special, mapx, mapy, size)
+        if (Math.round(mapx/size) == 9 && Math.round(mapy/size) == 1) {
+        let newDiv2 = document.createElement("div")
+        newDiv2.style.width = size
+        newDiv2.style.height = size
+        newDiv2.style.left = mapx + 588
+        newDiv2.style.top = mapy + 50055
+        newDiv2.style.position = "absolute"
+        newDiv2.style.zIndex = "3"
+        newDiv2.setAttribute("class", "hopper houseMap")
+        newDiv2.setAttribute("id", "lunchly")
+        let newimg2 = document.createElement("img")
+        newimg2.style.width = "100%"
+        newimg2.style.height = "100%"
+        newimg2.style.zIndex = "3"
+        newimg2.src= "textures/lunchly.png"
+        newDiv2.appendChild(newimg2)
+        document.body.insertBefore(newDiv2, gameDiv)
+        }
 
 
+      } else if (map == houseMap10) {
+        newDiv.classList.add("houseMap")
+        x = houseMap10startX*size
+        y = houseMap10startY*size
+        y += 50060
+        x += 560
+        interactLoad(houseMap10Special, mapx, mapy, size)
+
+        if (Math.round(mapx/size) == 2 && Math.round(mapy/size) == 0) {
+        let newDiv2 = document.createElement("div")
+        newDiv2.style.width = size*6
+        newDiv2.style.height = size*6
+        newDiv2.style.left = mapx + 588
+        newDiv2.style.top = mapy + 50055
+        newDiv2.style.position = "absolute"
+        newDiv2.style.zIndex = "3"
+        newDiv2.setAttribute("class", "hopper houseMap")
+        newDiv2.setAttribute("id", "keycard2")
+        let newimg2 = document.createElement("img")
+        newimg2.style.width = "100%"
+        newimg2.style.height = "100%"
+        newimg2.style.zIndex = "3"
+        newimg2.src= "textures/keycardHighlight.png"
+        newDiv2.appendChild(newimg2)
+        document.body.insertBefore(newDiv2, gameDiv)
+        }
       }
 
             
@@ -950,6 +1128,7 @@ function gameLoad(map, size) {
       interactLoad(houseMap2Special, size)
     } else if (map == houseMap3) {
       spriteLoad(houseMap3Decor, size)
+      passwordStaff("nil", size)
     }  else if (map == houseMap4) {
       spriteLoad(houseMap4Decor, size)
     }  else if (map == houseMap5) {
@@ -1339,6 +1518,9 @@ function transitionCollision() {
       }  else if (transitionList[i].id == "houseMap9") {
         gameUnload()
         gameLoad(houseMap9, 56)
+      }  else if (transitionList[i].id == "houseMap10") {
+        gameUnload()
+        gameLoad(houseMap10, 56)
       }
       
     }
@@ -1511,6 +1693,7 @@ chatButton.onclick = function() {
 
     if (!(chatText.value == "" || chatText.value == null)) {
       scubMirror(chatText.value)
+      passwordStaff(chatText.value, 56)
     }
     chatText.value = ''
 }
@@ -1605,5 +1788,35 @@ function checkItemInteract(item, object){
         newDiv2.setAttribute("class", "houseMap")
         newDiv2.setAttribute("id", "numberPictue1")
         document.body.insertBefore(newDiv2, gameDiv)
+        number1Found = true
+  }
+  if (object.id == "lunchly" && item.id == "camera") {
+    let newDiv2 = document.createElement("img")
+        newDiv2.style.width = 200
+        newDiv2.style.height = 140
+        newDiv2.style.left = 588 + 430
+        newDiv2.style.top = 50625 - 560
+        newDiv2.style.position = "absolute"
+        newDiv2.src = "textures/numberPic2.png"
+        newDiv2.style.zIndex = "3"
+        newDiv2.setAttribute("class", "houseMap")
+        newDiv2.setAttribute("id", "numberPictue1")
+        document.body.insertBefore(newDiv2, gameDiv)
+        number2Found = true
+  }
+  if (object.id == "whatsapp" && item.id == "camera") {
+    let newDiv2 = document.createElement("img")
+        newDiv2.style.width = 200
+        newDiv2.style.height = 140
+        newDiv2.style.left = 588 + 230
+        newDiv2.style.top = 50625 - 400
+        newDiv2.style.position = "absolute"
+        newDiv2.src = "textures/numberPic3.png"
+        newDiv2.style.zIndex = "2"
+        newDiv2.setAttribute("class", "houseMap")
+        newDiv2.setAttribute("id", "numberPictue1")
+        document.getElementById("whatsapp").remove()
+        document.body.insertBefore(newDiv2, gameDiv)
+        number3Found = true
   }
 }
